@@ -1,0 +1,154 @@
+:root{
+  --gray-darken: #252422;
+  --gray-middle: #403d39;
+  --gray-ligth: #ccc5b9;
+  --orange: #eb5e28;
+  --withe: #fffcf2;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+ background:var(--gray-darken);
+ color: var(--withe);
+}
+
+.container{
+  margin: 1rem 5rem ;
+}
+
+.btn{
+  border: none;
+  padding: 0.5rem;
+}
+
+.btn-primary{
+  cursor: pointer;
+  font-size: x-large;
+  color: var(--withe);
+  border: none;
+  padding: 0.5rem;
+  background-color: var(--orange);
+}
+
+.bg-gray-middle{
+  background: var(--gray-middle);
+}
+
+
+
+.d-flex{
+  display: flex;
+}
+
+.card__container{
+  margin-top: 2rem;
+  gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+}
+
+/* Estilos de las Cards */
+#card{
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+#card:hover{
+  box-shadow: 1px 1px 3px 1px var(--orange);
+}
+.card{
+  padding: 1rem;
+}
+
+.card__header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 0.5rem;
+  text-transform: uppercase;
+  border-bottom: 3px solid var(--orange);
+}
+
+.card__items{
+  display: flex;
+  gap: 1rem;
+}
+
+
+.card__items button{
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  background-color: var(--orange);
+  color: var(--gray-ligth);
+}
+
+.card__body{
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.card__body  svg{
+  margin-right: 10px;
+}
+
+
+/* Styles of form */
+
+.modal_container{
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(87, 87, 87,0.4);
+  backdrop-filter: blur(2px)  ;
+  display: none;
+}
+  .form-group{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+  }
+
+
+  .form-group button:hover{
+    background-color: rgba(235, 94, 40, 0.7);
+  }
+
+  .form-control{
+    padding: 0.5rem;
+  }
+
+  .modal{
+    width: 50vw;
+    height: auto;
+  }
+  .modal_show{
+    transition: all 1s;
+    display: flex;
+    animation: watchModal 0.3s;
+    
+  }
+  
+/* Efectos */
+@keyframes watchModal {
+  0% {
+    transform: translateY(1000px);
+  }
+  100%{
+    transform: translateY(0);
+  }
+ 
+}
